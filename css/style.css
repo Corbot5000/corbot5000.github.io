@@ -5,6 +5,26 @@ body {
     font-weight: normal;
 }
 
+h1,h2,h3,h4,h5,h6 {
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: 0px;
+	
+}
+
+h1 {
+	color: #000000;
+	font-size: 40px;
+	line-height: normal;
+}
+
+p {
+	color: #000000;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 22px;
+}
+
 a.skip-main {
     left:-999px;
     position:absolute;
