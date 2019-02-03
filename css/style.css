@@ -73,4 +73,5 @@ a.skip-main:focus, a.skip-main:active {
 .vertical-nav a.active {
   background-color: #29602A; 
   color: white;
+  text-decoration: underline;
 }
