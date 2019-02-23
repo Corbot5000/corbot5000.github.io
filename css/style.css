@@ -10,7 +10,7 @@ body {
 }
 
 .background {
-    background-image: url('http://corbot5000.io/images/background.jpg');
+    background-image: url('../images/background.jpg');
 }
 
 h1,
