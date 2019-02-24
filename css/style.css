@@ -71,7 +71,6 @@ a.skip-main:active {
 /*Nav Bar*/
 
 .navigation {
-    -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
     padding: 0;
 }
