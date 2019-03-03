@@ -203,6 +203,13 @@ a.skip-main:active {
         width: calc(33.3333% - 2rem);
         margin: 1rem;
     }
+    
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 15%;
+}
 }
 
 /*Print Adjustments*/
