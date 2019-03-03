@@ -93,7 +93,19 @@ a.skip-main:active {
     text-decoration: underline;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
+.h1-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
 /*Gallery*/
 
 .container {
@@ -111,6 +123,45 @@ a.skip-main:active {
     margin: 1rem;
 }
 
+/*-Social Media-*/
+
+.social-icon {
+  position: relative;
+  padding: 1vh;
+  margin: 0;
+  text-align: center;
+}
+
+.social-icon li {
+  color: #454545;
+  display: inline-block;
+  list-style: none;
+}
+
+.social-icon li a {
+  background: #ffffff;
+  border-radius: 100%;
+  color: #454545;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  margin: 0px 6px 10px 6px;
+}
+
+.social-icon li a:hover {
+  background: #9B9B9B;
+  color: #ffffff;
+  transform: scale(1.1);
+  top: -5px;
+}
 
 /*Resolution Adjustments*/
 
@@ -132,6 +183,19 @@ a.skip-main:active {
         width: calc(50% - 2rem);
         margin: 1rem;
     }
+    
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 25%;
+}
+    .h1-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 95%;
+}
 }
 
 @media screen and (min-width: 1000px) {
