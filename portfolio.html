@@ -9,9 +9,9 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Laila|Merriweather|Montserrat|Roboto+Condensed"
         rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Corbet Griffith's Portfolio - Portfolio</title>
-    <script src="//cdn.jsdelivr.net/npm/afterglowplayer@1.x"></script>
 </head>
 
 <body>
@@ -35,8 +35,9 @@
         <div class="container">
             <div class="grid">
                 <div class="cell">
-                    <video class=”afterglow” id=”LibraryVideo” width=”720" height=”864">
-                        <source type=”video/mp4" src=”images/library.mp4" />
+                    <video id='Lil-Library' class='video-js' controls preload='auto' width='720' height='864'
+                        data-setup='{}'>
+                        <source src='images/library.mp4' type='video/mp4'>
                     </video>
                 </div>
                 <div class="cell">
@@ -80,6 +81,7 @@
             </ul>
         </div>
     </footer>
+    <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
 </body>
 
 </html>
