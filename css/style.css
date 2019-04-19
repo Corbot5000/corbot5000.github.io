@@ -374,34 +374,6 @@ a.skip-main:active {
         margin-right: auto;
         width: 75%;
     }
-
-    /*-Callout Stuff-*/
-    .callout {
-        position: relative;
-        background: #f3ea99;
-        border-radius: .5em;
-    }
-
-    .callout:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border: 0px solid transparent;
-        border-bottom-color: #f3ea99;
-        border-top: 0;
-    }
-
-    .closebtn {
-        position: absolute;
-        top: 5px;
-        right: 15px;
-        color: black;
-        font-size: 30px;
-        cursor: pointer;
-    }
 }
 
 /*Print Adjustments*/
