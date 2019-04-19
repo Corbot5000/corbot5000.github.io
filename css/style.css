@@ -9,10 +9,6 @@ body {
     box-sizing: border-box;
 }
 
-.background {
-    background-image: url('../images/background.jpg');
-}
-
 p {
     padding: 5px;
     margin: 0px 0px 0px 0px;
