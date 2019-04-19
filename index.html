@@ -26,11 +26,11 @@
     </script>
 </head>
 
-<body>
+<body onload="typeWriter()">
     <header>
         <a class="skip-main" href="#main">Skip to Content</a>
         <nav>
-            <div class="navigation">
+            <div class="navigation" id="stickynav">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About Me</a>
                 <a href="resume.html">Resume</a>
@@ -40,11 +40,12 @@
     </header>
     <main class="response-center">
         <img src="images/IMG_0002.png" alt="Avatar of Corbet" class="center">
-        <h1 class="h1-center" id="app"></h1>
-        <p id="main" tabindex="-1"></p>
-        <div class="callout response-center">
+        <h1 class="h1-center" tabindex="-1"></h1>
+        <h1 id="demo"></h1>
+        <div class="callout">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            <p>Currently looking for a Summer 2019 Internship! <a href="mailto:me@corbetgriffith.com">E-mail Me!</a></p>
+            <div class="callout-container"></div>
+                <p>Currently looking for a Summer 2019 Internship! <a href="mailto:me@corbetgriffith.com">E-mail Me!</a></p>
             </div>
         </div>
         

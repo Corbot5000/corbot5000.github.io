@@ -13,6 +13,11 @@ body {
     background-image: url('../images/background.jpg');
 }
 
+p {
+    padding: 5px;
+    margin: 0px 0px 0px 0px;
+}
+
 h1,
 h2,
 h3,
@@ -69,16 +74,17 @@ a.skip-main:active {
 }
 
 .response-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
 
 /*Nav Bar*/
 
 .navigation {
     flex-flow: column wrap;
+    overflow: hidden;
     padding: 0;
 }
 
@@ -101,10 +107,42 @@ a.skip-main:active {
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*Sticky Bar Stuff*/
+/* Page content */
+#stickynav a {
+    background-color: #F5F5DC;
+    color: black;
+    display: block;
+    padding: 18px;
+    text-decoration: none;
+}
+
+#stickynav a:hover {
+    background-color: #ccc;
+}
+
+#stickynav a.active {
+    background-color: #29602A;
+    color: white;
+    text-decoration: underline;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.main {
+    padding-top: 0px;
 }
 
 
@@ -128,43 +166,162 @@ a.skip-main:active {
 /*-Social Media-*/
 
 .social-icon {
-  position: relative;
-  padding: 1vh;
-  margin: 0;
-  text-align: center;
+    position: relative;
+    padding: 1vh;
+    margin: 0;
+    text-align: center;
 }
 
 .social-icon li {
-  color: #454545;
-  display: inline-block;
-  list-style: none;
+    color: #454545;
+    display: inline-block;
+    list-style: none;
 }
 
 .social-icon li a {
-  background: #ffffff;
-  border-radius: 100%;
-  color: #454545;
-  cursor: pointer;
-  font-size: 20px;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  top: 0;
-  margin: 0px 6px 10px 6px;
+    background: #ffffff;
+    border-radius: 100%;
+    color: #454545;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    margin: 0px 6px 10px 6px;
 }
 
 .social-icon li a:hover {
-  background: #9B9B9B;
-  color: #ffffff;
-  transform: scale(1.1);
-  top: -5px;
+    background: #9B9B9B;
+    color: #ffffff;
+    transform: scale(1.1);
+    top: -5px;
 }
 
+/*-Callout Stuff-*/
+.callout {
+    position: relative;
+    background: #f3ea99;
+    border-radius: .5em;
+}
+
+.callout:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 0px solid transparent;
+    border-bottom-color: #f3ea99;
+    border-top: 0;
+}
+
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*-Accordion Stuff-*/
+
+.accordion-box {
+    max-width: 500px;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.accordion-panel-box {
+    max-width: 500px;
+}
+
+.accordion {
+    background-color: #29602A;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    margin-top: 0px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #29602A
+}
+
+.panel {
+    padding: 0px;
+    background-color: white;
+    max-height: 0;
+    max-width: 500px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*-Flip Card-*/
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 500px;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flip,
+.flip-container.hover .flip {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 320px;
+    height: 480px;
+    max-width: 500px;
+}
+
+/* flip speed */
+.flip {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, hidden */
+.back {
+    border: 100px;
+    background: white;
+    transform: rotateY(180deg);
+}
+
+/****************************/
 /*Resolution Adjustments*/
 
 @media screen and (min-width: 600px) {
@@ -185,19 +342,20 @@ a.skip-main:active {
         width: calc(50% - 2rem);
         margin: 1rem;
     }
-    
+
     .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 20%;
-}
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+    }
+
     .response-center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 95%;
-}
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -205,27 +363,58 @@ a.skip-main:active {
         width: calc(33.3333% - 2rem);
         margin: 1rem;
     }
-    
-    .center {
-      width: 25%;
-    }
-    .h1-center {
-      width: 70%;
-    }
-    .response-center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 75%;
-}
 
+    .center {
+        width: 25%;
+    }
+
+    .h1-center {
+        width: 100%;
+    }
+
+    .response-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+
+    /*-Callout Stuff-*/
+    .callout {
+        position: relative;
+        background: #f3ea99;
+        border-radius: .5em;
+    }
+
+    .callout:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 0px solid transparent;
+        border-bottom-color: #f3ea99;
+        border-top: 0;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        color: black;
+        font-size: 30px;
+        cursor: pointer;
+    }
 }
 
 /*Print Adjustments*/
 
 @media print {
-    header nav, footer {
-    display: none;
+
+    header nav,
+    footer {
+        display: none;
     }
 
     .grid {
@@ -238,5 +427,8 @@ a.skip-main:active {
         width: calc(50% - 2rem);
         margin: 1rem;
     }
-}
 
+    body:after {
+        content: url(http://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=<<URL>>)
+    }
+}
