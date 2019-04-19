@@ -7,8 +7,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Laila|Merriweather|Montserrat|Roboto+Condensed"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Laila|Merriweather|Montserrat|Roboto+Condensed" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Corbet Griffith's Portfolio</title>
@@ -41,10 +40,15 @@
     </header>
     <main class="response-center">
         <img src="images/IMG_0002.png" alt="Avatar of Corbet" class="center">
-        <h1 class="h1-center">Hello, my name is Corbet. I study User Experience Research and Design</h1>
+        <h1 class="h1-center" id="app"></h1>
         <p id="main" tabindex="-1"></p>
-        <i class="fas fa-envelope" aria-label="E-mail Logo"></i>
-        <a href="mailto:me@corbetgriffith.com">E-mail Me</a>
+        <div class="callout response-center">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <p>Currently looking for a Summer 2019 Internship! <a href="mailto:me@corbetgriffith.com">E-mail Me!</a></p>
+            </div>
+        </div>
+        
+        
 
 
         <p>I'm currently working on my Masters of Science at the University of Michigan School of Information, where I'm
@@ -63,6 +67,8 @@
             </ul>
         </div>
     </footer>
+    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>
